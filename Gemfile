@@ -1,6 +1,9 @@
 ruby '2.0.0'
 source 'https://rubygems.org'
 
+gem 'capistrano', '~> 3.3.0'
+gem 'capistrano-passenger'
+
 # PostgreSQL driver
 gem 'pg'
 
