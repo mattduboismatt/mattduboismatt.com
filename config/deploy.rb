@@ -1,3 +1,7 @@
+# http://robmclarty.com/blog/how-to-deploy-a-rails-4-app-with-git-and-capistrano
+
+set :rbenv_ruby, '2.0.0-p247'
+
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
@@ -26,7 +30,7 @@ set :deploy_via, :copy
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml')
@@ -39,8 +43,8 @@ set :deploy_via, :copy
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
-default_run_options[:pty] = true
-server "www.prak.dreamhost.com", :app, :web, :db, :primary => true
+# default_run_options[:pty] = true
+server "www.mattduboismatt.com", roles: [:app, :web, :db], :primary => true
 
 namespace :deploy do
 

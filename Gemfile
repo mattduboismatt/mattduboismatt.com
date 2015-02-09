@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 gem 'capistrano', '~> 3.3.0'
 gem 'capistrano-passenger'
+gem 'capistrano-rbenv', '~> 2.0' # required
+gem 'capistrano-rbenv-install', '~> 1.2.0'
 
 # PostgreSQL driver
 gem 'pg'
